@@ -52,7 +52,7 @@ section > h1 {
     opacity: 1;
     width: 100%;
     text-align: center;
-    background-color: #74b38d;
+    background-color: black;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
@@ -70,7 +70,6 @@ section > h1 {
 }
 
 #dd-content a:first-child {
-    /* padding: 4px 9px 4px 9px; */
     border-width: 0px 1px 0px 1px;
     margin: 0px;
 }
@@ -80,7 +79,7 @@ section > h1 {
 }
 
 #dd-content a:hover, #dd-content a:active {
-    background-color: #f1f1f1;
+    background-color: #273746;
     border-radius: 1px;
 }
 

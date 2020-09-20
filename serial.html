@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive_sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive_md.css" />
+
+    <script src="js/utility.js"></script>
+    
+    <title>DaisyDriver - Serial Interface</title>
+</head>
+
+<body>
+    
+    <div class="main-container">
+    <header>
+        <h1><img src="assets/daisydrivertext.png" width="30%"></h1>
+        <nav role="navigation">
+            <div id="dd-imgcontainer">
+                <img src="assets/reorder-three.svg" / id="dd-img">
+            </div>
+            <div id="dd-content">
+                <a href="index.html">Home</a
+                ><a href="assembly.html">Assembly</a
+                ><a href="operation.html">Operating</a
+                ><a href="serial.html" class="current">Serial Interface</a
+                ><a href="gui.html">GUI</a
+                ><a href="programming.html">Programming</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h1 class="postheading">Serial Interface</h1>
+        <p>
+            DaisyDriver modules are commanded and queried using a serial link over USB.
+            Commands sent to the DaisyDriver must be sent with the following parameters;
+            115200 baud, 8 data bits, 1 stop bit, no parity, and terminated with the carriage
+            return character <code>\r</code>. Unrecognised commands or commands with insufficient characters
+            will be reported via the serial connection, and ignored. The DaisyDriver comes preloaded
+            with commands to access its main functions. These commands are listed alphabetically
+            below, with details of their operation.
+        </p>
+        <div class="command">
+        <h2 class="sig">NET <i>Address Command Arguments</i></h2>
+        <p>
+            
+            NET sends commands to modules connected in a chain. As all DaisyDriver commands are
+            sent to the first module in a chain, commands for downstream modules must be sent
+            with NET.<br /><br />
+            
+            Example: <code>NET 3 MOV 500 500 500 \r</code> sends module 3 to (500, 500, 500).
+        </p>
+        </div>
+        <div class="command">
+        <h2 class="sig">MOV <i>X Y Z</i></h2>
+        <p>
+        
+            MOV commands the module to move to step to a certain position, specified by the
+            arguments. MOV is an absolute positioning command, rather than a relative
+            positioning command. This means that repeated calls to MOV must specify
+            different coordinates in order to cause motion.<br /><br />
+        
+            Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
+        </p>
+        </div>
+        <div class="command">
+        <h2 class="sig">STV <i>Vx Vy Vz</i></h2>
+        <p>
+        
+            STV sets the velocities of the axes, as measured in steps per second.
+            <i>N.B. Commanding the motors to run at velocities greater than 1000 steps/s
+            will cause them to behave unreliably.</i><br /><br />
+        
+            Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
+        </p>
+        </div>
+        <div class="command">
+            <h2 class="sig">STV <i>Vx Vy Vz</i></h2>
+            <p>
+        
+                STV sets the velocities of the axes, as measured in steps per second.
+                <i>N.B. Commanding the motors to run at velocities greater than 1000 steps/s
+                    will cause them to behave unreliably.</i><br /><br />
+        
+                Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
+            </p>
+        </div>
+
+
+    </section>
+    </div>
+
+    <footer>
+        <p>Site code by Jonathan Louis Kaplan and Fergus Riche under MIT License unless otherwise stated.</p>
+    </footer>
+
+</body>
+
+</html>

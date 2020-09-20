@@ -19,12 +19,12 @@ header {
     margin: 5px auto 10px;
 }
 
-header > h1 {
+header > img {
     text-align: center;
+    margin: 0px auto;
     display: block;
-    margin: 0px;
-    font-size: 30px;
-    text-shadow: 1px 1px 1px #8a2985d0; 
+    pad: 0px;
+    width: 30%;
 }
 
 nav {
@@ -55,7 +55,7 @@ section > h1 {
     background-color: black;
     border-style: solid;
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 4px;
     z-index: 0;
 }
 

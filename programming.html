@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive_sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive_md.css" />
+
+    <script src="js/utility.js"></script>
+    
+    <title>DaisyDriver - Graphical User Interface</title>
+</head>
+
+<body>
+    
+    <div class="main-container">
+    <header>
+        <img src="assets/daisydrivertext.png">
+        <nav role="navigation">
+            <div id="dd-imgcontainer">
+                <img src="assets/reorder-three.svg" / id="dd-img">
+            </div>
+            <div id="dd-content">
+                <a href="index.html">Home</a
+                ><a href="assembly.html">Assembly</a
+                ><a href="operation.html">Operating</a
+                ><a href="serial.html">Serial Interface</a
+                ><a href="gui.html">GUI</a
+                ><a href="programming.html" class="current">Programming</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <h1 class="postheading">Programming Instructions</h1>
+        <p>
+            In order to program your DaisyDriver, first determine whether it has been programmed before.
+        </p>
+        <p>            
+            This can be done by connecting the hardware module to a computer via USB and seeing if it is
+            recognised as a USB device. If it is not recognised, then the module has not been programmed
+            before and requires the bootloader to be loaded before the module can be programmed.
+        </p>
+
+        <hr>
+
+        <h2>Burning the bootloader</h2>
+        <ol>
+            <li>Remove power to the module and disconnect it from any other devices.</li>
+            <li>Connect the module to a computer via a programmer. Many choices of programmer are available,
+                and two suggestions are given below.</li>
+            <li>Open the Arduino IDE and go to the <b><i>tools</i></b> menu. From there, select your programmer from
+                the <b><i>programmer</i></b> drop-down. Select the board as <b><i>Arduino/Genuino Micro</i></b> from the
+                <b><i>Boards</i></b> menu and finish by selecting <b><i>burn bootloader</i></b>.</li>
+            <li>Successful programming is indicated by the Arduino IDE.</li>
+        </ol>
+
+        <h2>Suggestions for programmers</h2>
+        <p>Whilst there are many programmers available for the Arduino ecosystem, two programmers are
+            recommended in particular due to their ease of use and availability, respectively.</p>
+        <ol>
+            <li>The <a href="https://store.arduino.cc/arduino-isp">Arduino ISP</a>, a dedicated programmer
+                which is useful for cases where boards are programmed regularly.</li>
+            <li>The <a href="https://www.arduino.cc/en/Tutorial/ArduinoISP">Arduino as ISP</a>, a method
+                to use standard Arduino boards as programmers.</li>
+        </ol>
+
+        <hr>
+
+        <p>
+            Once the bootloader is programmed onto the module, the module should be connected
+            directly to power and connected to a computer via USB. It will then be recognised
+            as a USB device, which can be programmed via the Arduino IDE.
+        </p>
+        <p>
+            Before the program can be uploaded, its libraries must be installed. Do this by
+            moving the folder <code>Arduino-SerialCommand-Fergboard</code> into Arduino's <i><b>libraries</b></i>
+            folder. Once this has been done, load the file <code>fergboard_2v2.ino</code> into the Arduino IDE
+            and program the board by clicking the <b><i>Upload</b></i> icon.
+        </p>
+
+    </section>
+    </div>
+
+    <footer>
+        <p>Site code by Jonathan Louis Kaplan and Fergus Riche under MIT License unless otherwise stated.</p>
+    </footer>
+
+</body>
+
+</html>

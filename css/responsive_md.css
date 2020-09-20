@@ -12,6 +12,10 @@ body {
     margin: 0px auto;
 }
 
+footer {
+    font-size: 11px;
+}
+
 header {
     height: 8vh;
     width: 768px;

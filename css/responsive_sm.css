@@ -1,0 +1,158 @@
+header {
+    text-align: left;
+    height: 35px;
+    margin: 3px 3px 25px 3px;
+}
+
+header > h1 {
+    display: inline;
+    text-align: left;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px #8a2985d0; 
+}
+
+nav {
+    position: relative;
+    float: right;
+}
+
+#dd-imgcontainer {
+    width: 35px;
+    height: 35px;
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+    transition-delay: 0s;
+}
+
+nav:hover #dd-imgcontainer {
+    background-color: #74b38d;
+    border-style: solid solid double solid;
+}
+
+#dd-img {
+    width: 35px;
+    height: 35px;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: .1s;
+    transition-delay: .0s;
+}
+
+nav:hover #dd-img {
+    transform: rotate(90deg);
+}
+
+#dd-content {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    margin: 0px;
+    min-width: 110px;
+    text-align: right;
+    float: right;
+    background-color: #74b38d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-duration: .15s, .15s;
+    transition-delay: 0s, 0s;
+}
+
+nav:hover #dd-content, nav:focus #dd-content, nav:active #dd-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+#dd-content a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    line-height: 170%;
+    padding: 0px 4px;
+}
+
+#dd-content a.current {
+    text-decoration: underline;
+}
+
+#dd-content a:hover, #dd-content a:active {
+    background-color: #f1f1f1;
+    border-radius: 1px;
+}
+
+section {
+    text-align: left;
+}
+
+section > h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.33rem;
+    font-style: normal;
+    text-align: left;
+}
+
+section > h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+section p {
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+}
+
+section > p > a {
+    text-decoration: none;
+    color: #0500ee;
+}
+
+section > p > a:hover {
+    background-color: #fbff0063;
+    border-radius: 3px;
+}
+
+section ul li {
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+    margin: 6px 1px;
+}
+
+footer {
+    width: 80%;
+    font-size: 11px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+#publist li {
+    margin: 10px 5px 25px 0px;
+    width: 95%
+}
+
+#catlist {
+    text-align: center;
+}
+
+.pubcat {
+    display: inline-block;
+    font-size: 85%;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3.5px;
+    padding: 2px;
+}
+
+.catbutton {
+    cursor: pointer;
+    margin: 2px 2px 2px 2px;
+}

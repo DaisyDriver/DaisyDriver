@@ -1,0 +1,33 @@
+.resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: monospace;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255,255,255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 7px;
+    margin: 0px;
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}

@@ -154,3 +154,13 @@ ol {
 ol li {
     margin: 7px;
 }
+
+#boardlayout {
+    max-width: 100%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+h3 {
+    margin: 4px 0px 0px 1px;
+}

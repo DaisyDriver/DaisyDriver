@@ -46,52 +46,57 @@
             below, with details of their operation.
         </p>
         <div class="command">
-        <h2 class="sig">NET <i>Address Command Arguments</i></h2>
-        <p>
-            
-            NET sends commands to modules connected in a chain. As all DaisyDriver commands are
-            sent to the first module in a chain, commands for downstream modules must be sent
-            with NET.<br /><br />
-            
-            Example: <code>NET 3 MOV 500 500 500 \r</code> sends module 3 to (500, 500, 500).
-        </p>
-        </div>
-        <div class="command">
-        <h2 class="sig">MOV <i>X Y Z</i></h2>
-        <p>
-        
-            MOV commands the module to move to step to a certain position, specified by the
-            arguments. MOV is an absolute positioning command, rather than a relative
-            positioning command. This means that repeated calls to MOV must specify
-            different coordinates in order to cause motion.<br /><br />
-        
-            Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
-        </p>
-        </div>
-        <div class="command">
-        <h2 class="sig">STV <i>Vx Vy Vz</i></h2>
-        <p>
-        
-            STV sets the velocities of the axes, as measured in steps per second.
-            <i>N.B. Commanding the motors to run at velocities greater than 1000 steps/s
-            will cause them to behave unreliably.</i><br /><br />
-        
-            Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
-        </p>
-        </div>
-        <div class="command">
-            <h2 class="sig">STV <i>Vx Vy Vz</i></h2>
+            <h2 class="sig">ENG</h2>
             <p>
+                <code>ENG</code> activates the axes of a module, switching the motor drivers on if they have
+                been disengaged. This command takes no arguments.<br /><br />
         
-                STV sets the velocities of the axes, as measured in steps per second.
-                <i>N.B. Commanding the motors to run at velocities greater than 1000 steps/s
-                    will cause them to behave unreliably.</i><br /><br />
+                Example: <code>ENG \r</code> activates the axes of a module, turning on the current
+                to the motor windings.
+            </p>
+        </div>
+        <div class="command">
+            <h2 class="sig">MOV <i>X Y Z</i></h2>
+            <p>
+                <code>MOV</code> commands the module to move to step to a certain position, specified by the
+                arguments. <code>MOV</code> is an absolute positioning command, rather than a relative
+                positioning command. This means that repeated calls to <code>MOV</code> must specify
+                different coordinates in order to cause motion.<br /><br />
         
                 Example: <code>MOV 500 500 500 \r</code> sends a module to (500, 500, 500).
             </p>
         </div>
-
-
+        <div class="command">
+            <h2 class="sig">NET <i>Address Command Arguments</i></h2>
+            <p>
+                <code>NET</code> sends commands to modules connected in a chain. As all DaisyDriver commands are
+                sent to the first module in a chain, commands for downstream modules must be sent
+                with <code>NET</code>.<br /><br />
+                
+                Example: <code>NET 3 MOV 500 500 500 \r</code> sends module 3 to (500, 500, 500).
+            </p>
+        </div>
+        <div class="command">
+            <h2 class="sig">SLP</h2>
+            <p>
+                <code>SLP</code> deactivates the axes of a module, switching the motor drivers off if they
+                are engaged. This command takes no arguments<br /><br />
+        
+                Example: <code>SLP \r</code> deactivates the axes of a module, turning off the current
+                to the motor windings.
+            </p>
+        </div>
+        <div class="command">
+            <h2 class="sig">STV <i>Vx Vy Vz</i></h2>
+            <p>
+                <code>STV</code> sets the velocities of the axes, as measured in steps per second.
+                <i>N.B. Commanding the motors to run at velocities greater than 1000 steps/s
+                will cause them to behave unreliably.</i><br /><br />
+            
+                Example: <code>STV 300 400 500 \r</code> sets the module's X velocity to 300
+                steps/s, the Y velocity to 400 steps/s, and the Z velocity to 500 steps/s.
+            </p>
+        </div>
     </section>
     </div>
 
